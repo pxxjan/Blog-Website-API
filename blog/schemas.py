@@ -1,13 +1,9 @@
 from pydantic import BaseModel
+from typing import List
 
 class Blog(BaseModel):
     title: str
     body: str
-
-
-#Response Model
-class ShowBlog(Blog):
-    pass
 
 
 class User(BaseModel):
@@ -18,3 +14,10 @@ class User(BaseModel):
 class ShowUser(BaseModel):
     name: str
     email: str
+    blogs: List[Blog]
+
+#Response Model
+class ShowBlog(Blog):
+    title: str
+    body: str
+    creator: ShowUser
