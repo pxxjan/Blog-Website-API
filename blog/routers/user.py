@@ -23,4 +23,3 @@ def create_user(request: schemas.User, db: Session = Depends(get_db)):
 def get_user(id: int, db: Session = Depends(get_db)):
 
     return user.show(id, db)
-

@@ -21,4 +21,3 @@ def show(id: int, db: Session):
         raise HTTPException(status_code= status.HTTP_404_NOT_FOUND, detail=f"User with the id {id} is not available")
     
     return user
-

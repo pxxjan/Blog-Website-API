@@ -53,4 +53,3 @@ def show(id: int, db: Session):
         raise HTTPException(status.HTTP_404_NOT_FOUND, detail=f"Blog with the id {id} is not available")
     
     return blog
-
